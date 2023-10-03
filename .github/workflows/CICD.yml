@@ -36,17 +36,17 @@ jobs:
             ls -R        
             git config --global user.name "Ujjawal Anand"
             git config --global user.email "uswalanand1999@gmail.com"
-            eval $(ssh-agent -s)
-            chmod 700 ./Auth/id_ed25519
-            ssh-add ./Auth/id_ed25519   
-            git clone git@github.com:uswal/DBT.git
+
             cd ./DBT
             touch "$(date +'%Y%m%d%H%M%S').txt"
             git add .
-            git commit -m "yes"
-            git push origin
+            git commit -m "Generate and push a file"
+            git push
 
 
     # git clone https://github.com/uswal/DBT.git         
             
-        
+    # eval $(ssh-agent -s)
+    # chmod 700 ./Auth/id_ed25519
+    # ssh-add ./Auth/id_ed25519   
+    # git clone git@github.com:uswal/DBT.git
