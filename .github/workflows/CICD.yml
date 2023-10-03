@@ -34,10 +34,9 @@ jobs:
         run: |
             pwd
             ls -R
-            cd /home/runner/work/DBT/DBT/Auth/
             git config --global user.name "Ujjawal Anand"
             git config --global user.email "uswalanand1999@gmail.com"
-            ssh-add ~/.ssh/id_ed25519
+            ssh-add ~/.Auth/id_ed25519
             
             
         
