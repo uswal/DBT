@@ -30,7 +30,7 @@ jobs:
             apt-get update
             apt-get install -y git
             git --version
-      - name: Git Auth
+      - name: DBT auto add seeds
         run: |
             pwd
             ls -R        
@@ -40,6 +40,8 @@ jobs:
             chmod 700 ./Auth/id_ed25519
             ssh-add ./Auth/id_ed25519   
             git clone https://github.com/uswal/DBT.git
+            ssh -T git@github.com
+
             
             
             
