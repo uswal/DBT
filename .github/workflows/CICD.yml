@@ -39,7 +39,7 @@ jobs:
             eval $(ssh-agent -s)
             chmod 700 ./Auth/id_ed25519
             ssh-add ./Auth/id_ed25519   
-            git clone https://github.com/uswal/DBT.git
+            git clone git@github.com:uswal/DBT.git
             cd ./DBT
             touch "$(date +'%Y%m%d%H%M%S').txt"
             git add .
