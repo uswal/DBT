@@ -23,9 +23,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: change directory
         run: cd $GITHUB_WORKSPACE
-      - name: current directory
-        run: pwd
-      - name: Java version
-        run: java --version
-      - name: list
-        run: ls
+      - name: git check
+        run: git -v
+        
