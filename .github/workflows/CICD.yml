@@ -23,6 +23,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: change directory
         run: cd $GITHUB_WORKSPACE
-      - name: git check
-        run: git -v
+      - name: Dbt version
+        run: dbt --version
+      - name: Install git
+        run: |
+            apt-get install git
+            git --version
         
