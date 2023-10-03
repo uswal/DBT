@@ -39,8 +39,7 @@ jobs:
             eval $(ssh-agent -s)
             chmod 700 ./Auth/id_ed25519
             ssh-add ./Auth/id_ed25519   
-            git remote set-url git@github.com:uswal/DBT.git      
-            sh -T git@github.com             
+            git clone https://github.com/uswal/DBT.git
             
             
             
