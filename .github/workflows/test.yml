@@ -19,10 +19,12 @@ jobs:
           echo "This is a generated file." > generated.txt
 
       - name: Commit and Push Generated File
+        env:
+            pat: ${{ secrets.TOKEN }}
         run: |
           git config --global user.name 'Ujjawal'
           git config --global user.email 'uswalanand1999@gmail.com'
-          git remote set-url origin https://github.com/uswal/DBT
+          git remote set-url origin https://github.com/${{ github.repository }}
           eval $(ssh-agent -s)
           chmod 700 ./Auth/id_ed25519
           ssh-add ./Auth/id_ed25519   
