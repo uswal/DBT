@@ -1,0 +1,27 @@
+name: Generate and Push File
+
+on:
+  push:
+    branches:
+      - main  # Change to your main branch name if needed
+
+jobs:
+  generate-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Generate File
+        run: |
+          # Add commands here to generate your file
+          echo "This is a generated file." > generated.txt
+
+      - name: Commit and Push Generated File
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add generated.txt
+          git commit -m "Generate and push a file"
+          git push
