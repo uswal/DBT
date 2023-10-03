@@ -27,6 +27,7 @@ jobs:
         run: dbt --version
       - name: Install git
         run: |
-            sudo apt-get install git
+            apt-get update
+            apt-get install git
             git --version
         
