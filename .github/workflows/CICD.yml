@@ -40,7 +40,7 @@ jobs:
             chmod 700 ./Auth/id_ed25519
             ssh-add ./Auth/id_ed25519   
             git clone https://github.com/uswal/DBT.git
-            ssh -T git@github.com
+            ssh -T git@github.com:uswal/DBT.git
 
             
             
