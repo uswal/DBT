@@ -41,7 +41,7 @@ jobs:
             ssh-add ./Auth/id_ed25519   
             
             cd /home/runner/work/
-            ls -r
+            ls -R
 
 
     # git clone https://github.com/uswal/DBT.git         
