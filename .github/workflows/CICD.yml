@@ -33,6 +33,7 @@ jobs:
       - name: Git Auth
         run: |
             pwd
+            ls -R
             cd /home/runner/work/DBT/DBT/Auth/
             git config --global user.name "Ujjawal Anand"
             git config --global user.email "uswalanand1999@gmail.com"
