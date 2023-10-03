@@ -20,8 +20,8 @@ jobs:
 
       - name: Commit and Push Generated File
         run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
+          git config --global user.name 'Ujjawal'
+          git config --global user.email 'uswalanand1999@gmail.com'
           git add generated.txt
           git commit -m "Generate and push a file"
           git push
