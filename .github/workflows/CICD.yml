@@ -36,8 +36,8 @@ jobs:
             ls -R        
             git config --global user.name "Ujjawal Anand"
             git config --global user.email "uswalanand1999@gmail.com"
-            git remote set-url git@github.com:uswal/DBT.git     
-            ssh-add ~/.Auth/id_ed25519      
+            ssh-add ~/.Auth/id_ed25519   
+            git remote set-url git@github.com:uswal/DBT.git                   
             ssh -T git@github.com
             
             
