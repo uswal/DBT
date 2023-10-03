@@ -19,8 +19,7 @@ jobs:
           echo "This is a generated file." > generated.txt
 
       - name: Commit and Push Generated File
-        env:
-            pat: ${{ secrets.TOKEN }}
+        
         run: |
           git config --global user.name 'Ujjawal'
           git config --global user.email 'uswalanand1999@gmail.com'
@@ -31,4 +30,6 @@ jobs:
           git add generated.txt
           git commit -m "Generate and push a file"
           git push
+        env:
+          GH_PAT: ${{ secrets.TOKEN }}
           
