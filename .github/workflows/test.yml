@@ -24,8 +24,8 @@ jobs:
       - name: Commit and Push Generated File
         run: |
             echo "hi"
-            git config --local user.email "uswalanand1999@gmail.com"
-            git config --local user.name "Ujjawal Anand"
+            git config --global user.email "uswalanand1999@gmail.com"
+            git config --global user.name "Ujjawal Anand"
             git add .
             git commit -m "test"
 
