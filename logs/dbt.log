@@ -36,3 +36,123 @@ xdg-open /__w/DBT/DBT/dbt
 [0m17:28:50.408858 [debug] [MainThread]: Command `dbt seed` succeeded at 17:28:50.408744 after 1.09 seconds
 [0m17:28:50.409292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f097185f310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0975edbd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f097193bad0>]}
 [0m17:28:50.409707 [debug] [MainThread]: Flushing usage events
+[0m17:32:43.548673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a15658390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a1564a050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a15147f10>]}
+
+
+============================== 17:32:43.552395 | 47a89565-4d55-44c8-8a8e-b706a3446e93 ==============================
+[0m17:32:43.552395 [info ] [MainThread]: Running with dbt=1.6.0
+[0m17:32:43.553262 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/__w/DBT/DBT/dbt/.dbt', 'log_path': '/__w/DBT/DBT/dbt/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --profiles-dir /__w/DBT/DBT/dbt/.dbt', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:32:43.811364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '47a89565-4d55-44c8-8a8e-b706a3446e93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a1115b410>]}
+[0m17:32:43.821485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '47a89565-4d55-44c8-8a8e-b706a3446e93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a15167b50>]}
+[0m17:32:43.822344 [info ] [MainThread]: Registered adapter: snowflake=1.6.0
+[0m17:32:43.831449 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m17:32:43.858262 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:32:43.858734 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:32:43.866397 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '47a89565-4d55-44c8-8a8e-b706a3446e93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a0f7369d0>]}
+[0m17:32:43.880770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '47a89565-4d55-44c8-8a8e-b706a3446e93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a111a20d0>]}
+[0m17:32:43.881612 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 372 macros, 0 groups, 0 semantic models
+[0m17:32:43.882165 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '47a89565-4d55-44c8-8a8e-b706a3446e93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a15d5ea50>]}
+[0m17:32:43.883981 [info ] [MainThread]: 
+[0m17:32:43.885169 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m17:32:43.887446 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB'
+[0m17:32:43.906942 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB"
+[0m17:32:43.907536 [debug] [ThreadPool]: On list_AIRBNB: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbt_github", "target_name": "dev", "connection_name": "list_AIRBNB"} */
+show terse schemas in database AIRBNB
+    limit 10000
+[0m17:32:43.907985 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:32:46.008604 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.0 seconds
+[0m17:32:46.012235 [debug] [ThreadPool]: On list_AIRBNB: Close
+[0m17:32:46.400311 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBNB, now list_AIRBNB_DEV)
+[0m17:32:46.411406 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV"
+[0m17:32:46.411941 [debug] [ThreadPool]: On list_AIRBNB_DEV: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbt_github", "target_name": "dev", "connection_name": "list_AIRBNB_DEV"} */
+show terse objects in AIRBNB.DEV limit 10000
+[0m17:32:46.412366 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:32:47.579180 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.0 seconds
+[0m17:32:47.582985 [debug] [ThreadPool]: On list_AIRBNB_DEV: Close
+[0m17:32:47.990622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '47a89565-4d55-44c8-8a8e-b706a3446e93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a0e480c10>]}
+[0m17:32:47.992092 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:32:47.992669 [info ] [MainThread]: 
+[0m17:32:48.003477 [debug] [Thread-1 (]: Began running node model.dbt_github.my_first_dbt_model
+[0m17:32:48.004439 [info ] [Thread-1 (]: 1 of 2 START sql table model DEV.my_first_dbt_model ............................ [RUN]
+[0m17:32:48.005477 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV, now model.dbt_github.my_first_dbt_model)
+[0m17:32:48.006088 [debug] [Thread-1 (]: Began compiling node model.dbt_github.my_first_dbt_model
+[0m17:32:48.015247 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_github.my_first_dbt_model"
+[0m17:32:48.016241 [debug] [Thread-1 (]: Timing info for model.dbt_github.my_first_dbt_model (compile): 17:32:48.006468 => 17:32:48.015975
+[0m17:32:48.016754 [debug] [Thread-1 (]: Began executing node model.dbt_github.my_first_dbt_model
+[0m17:32:48.053833 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_github.my_first_dbt_model"
+[0m17:32:48.055446 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_github.my_first_dbt_model"
+[0m17:32:48.056148 [debug] [Thread-1 (]: On model.dbt_github.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbt_github", "target_name": "dev", "node_id": "model.dbt_github.my_first_dbt_model"} */
+create or replace transient table AIRBNB.DEV.my_first_dbt_model
+         as
+        (/*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+        );
+[0m17:32:48.056691 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:32:51.277512 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m17:32:51.305493 [debug] [Thread-1 (]: Timing info for model.dbt_github.my_first_dbt_model (execute): 17:32:48.017156 => 17:32:51.305264
+[0m17:32:51.306035 [debug] [Thread-1 (]: On model.dbt_github.my_first_dbt_model: Close
+[0m17:32:51.705130 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '47a89565-4d55-44c8-8a8e-b706a3446e93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a16230a10>]}
+[0m17:32:51.706698 [info ] [Thread-1 (]: 1 of 2 OK created sql table model DEV.my_first_dbt_model ....................... [[32mSUCCESS 1[0m in 3.70s]
+[0m17:32:51.708171 [debug] [Thread-1 (]: Finished running node model.dbt_github.my_first_dbt_model
+[0m17:32:51.709642 [debug] [Thread-1 (]: Began running node model.dbt_github.my_second_dbt_model
+[0m17:32:51.710521 [info ] [Thread-1 (]: 2 of 2 START sql view model DEV.my_second_dbt_model ............................ [RUN]
+[0m17:32:51.711478 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_github.my_first_dbt_model, now model.dbt_github.my_second_dbt_model)
+[0m17:32:51.712010 [debug] [Thread-1 (]: Began compiling node model.dbt_github.my_second_dbt_model
+[0m17:32:51.715879 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_github.my_second_dbt_model"
+[0m17:32:51.716740 [debug] [Thread-1 (]: Timing info for model.dbt_github.my_second_dbt_model (compile): 17:32:51.712386 => 17:32:51.716478
+[0m17:32:51.717272 [debug] [Thread-1 (]: Began executing node model.dbt_github.my_second_dbt_model
+[0m17:32:51.745987 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_github.my_second_dbt_model"
+[0m17:32:51.747081 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_github.my_second_dbt_model"
+[0m17:32:51.747632 [debug] [Thread-1 (]: On model.dbt_github.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbt_github", "target_name": "dev", "node_id": "model.dbt_github.my_second_dbt_model"} */
+create or replace   view AIRBNB.DEV.my_second_dbt_model
+  
+   as (
+    -- Use the `ref` function to select from other models
+
+select *
+from AIRBNB.DEV.my_first_dbt_model
+where id = 1
+  );
+[0m17:32:51.748129 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:32:53.135432 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m17:32:53.141665 [debug] [Thread-1 (]: Timing info for model.dbt_github.my_second_dbt_model (execute): 17:32:51.717635 => 17:32:53.141438
+[0m17:32:53.142168 [debug] [Thread-1 (]: On model.dbt_github.my_second_dbt_model: Close
+[0m17:32:53.522920 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '47a89565-4d55-44c8-8a8e-b706a3446e93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a0f7145d0>]}
+[0m17:32:53.523925 [info ] [Thread-1 (]: 2 of 2 OK created sql view model DEV.my_second_dbt_model ....................... [[32mSUCCESS 1[0m in 1.81s]
+[0m17:32:53.525037 [debug] [Thread-1 (]: Finished running node model.dbt_github.my_second_dbt_model
+[0m17:32:53.528620 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:32:53.529146 [debug] [MainThread]: Connection 'model.dbt_github.my_second_dbt_model' was properly closed.
+[0m17:32:53.529619 [info ] [MainThread]: 
+[0m17:32:53.530318 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 9.64 seconds (9.64s).
+[0m17:32:53.531402 [debug] [MainThread]: Command end result
+[0m17:32:53.544522 [info ] [MainThread]: 
+[0m17:32:53.545307 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:32:53.545800 [info ] [MainThread]: 
+[0m17:32:53.546298 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m17:32:53.547054 [debug] [MainThread]: Command `dbt run` succeeded at 17:32:53.546923 after 10.01 seconds
+[0m17:32:53.547565 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a1543c810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a19a15350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a199fa850>]}
+[0m17:32:53.548110 [debug] [MainThread]: Flushing usage events
