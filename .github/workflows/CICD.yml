@@ -39,8 +39,12 @@ jobs:
             cd ./dbt
             git config --global user.email "uswalanand1999@gmail.com"
             git config --global user.name "Ujjawal Anand"
-            last_commit_msg=$(git log -1 --pretty=format:%s)
-            
+            if [[ "$last_commit_msg" != *"skip-ci"* ]]; then
+                echo "Commit message does not contain 'skip-ci'. Proceeding with the workflow."
+                # Add your other workflow steps here
+            else
+                echo "Commit message contains 'skip-ci'. Skipping the workflow."
+            fi
             touch "$(date +'%Y%m%d%H%M%S').txt"
             git add .
             git commit -m "skip-ci"
