@@ -13,16 +13,17 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: Generate File
-        run: |
-          # Add commands here to gener
-          git add .
-          git commit -m "test"
-          git push originate your file
-          echo "This is a generated file." > generated.txt
+    #   - name: Generate File
+    #     run: |
+    #       # Add commands here to gener
+    #       git add .
+    #       git commit -m "test"
+    #       git push originate your file
+    #       echo "This is a generated file." > generated.txt
 
       - name: Commit and Push Generated File
         run: |
+            echo "This is a generated file." > generated.txt
             echo "hi"
             git config --global user.email "uswalanand1999@gmail.com"
             git config --global user.name "Ujjawal Anand"
