@@ -36,6 +36,7 @@ jobs:
         run: |   
             pwd
             ls -R
+            cd /home/runner/work/DBT/DBT
             git remote set-url origin https://github.com/uswal/dbt.git
             git config --local user.email "action@github.com"
             git config --local user.name "github-actions"
