@@ -41,9 +41,10 @@ jobs:
             git config --global user.name "Ujjawal Anand"
             echo "********"
             last_commit_msg=$(git log -1 --pretty=format:%s)
-            echo "$last_commit_msg"
+            # echo "$last_commit_msg"
             if [[ "$last_commit_msg" != *"skip-ci"* ]]; then
-                touch "$(date +'%Y%m%d%H%M%S').txt"
+                # ######### code goes here
+                dbt seed
                 git add .
                 git commit -m "skip-ci"
                 git push https://$MY_SECRET@github.com/uswal/dbt.git

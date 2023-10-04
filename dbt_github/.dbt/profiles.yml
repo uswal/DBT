@@ -1,0 +1,26 @@
+dbt_github:
+  outputs:
+    dev:
+      account: NVZTPSB-TU08698
+      database: AIRBNB
+      password: dbtPassword123
+      role: transform
+      schema: DEV
+      threads: 1
+      type: snowflake
+      user: dbt
+      warehouse: COMPUTE_WH
+  target: dev
+dbtlearn:
+  outputs:
+    dev:
+      account: RWTFRHU-OT13108
+      database: AIRBNB
+      password: dbtPassword123
+      role: transform
+      schema: DEV
+      threads: 1
+      type: snowflake
+      user: dbt
+      warehouse: COMPUTE_WH
+  target: dev
