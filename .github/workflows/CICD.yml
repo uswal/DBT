@@ -30,8 +30,16 @@ jobs:
             apt-get update
             apt-get install -y git
             git --version
+      - name: Check Commit Message
+        run: |
+            last_commit_msg=$(git log -1 --pretty=format:%s)
+            if [[ "$last_commit_msg" == *"skip-ci"* ]]; then
+                echo "Skipping workflow due to commit message: $last_commit_msg"
+                exit 0
+            fi
+            shell: bash
 
-      - name: Merge
+      - name: Git Push
         env:
             MY_SECRET: ${{ secrets.TOKEN }}
         run: |
@@ -39,8 +47,8 @@ jobs:
             cd ./dbt
             git config --global user.email "uswalanand1999@gmail.com"
             git config --global user.name "Ujjawal Anand"
-            # touch "$(date +'%Y%m%d%H%M%S').txt"
+            touch "$(date +'%Y%m%d%H%M%S').txt"
             git add .
-            git commit -m "test"
+            git commit -m "skip-ci"
             git push https://$MY_SECRET@github.com/uswal/dbt.git
             
