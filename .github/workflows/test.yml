@@ -32,13 +32,13 @@ jobs:
             ssh-add ./Auth/id_ed25519   
             git add .
             git commit -m "test"
-            git push origin main
+            # git push origin main
 
 
-    #   - name: Push
-    #     uses: ad-m/github-push-action@master
-    #     with:
-    #         github_token: ${{secrets.token}}
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+            github_token: ${{secrets.token}}
 
         
           
