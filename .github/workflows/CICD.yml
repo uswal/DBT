@@ -48,7 +48,7 @@ jobs:
                 pwd
                 dbt seed --profiles-dir /__w/DBT/DBT/dbt/pf
                 dbt test --profiles-dir /__w/DBT/DBT/dbt/pf
-                dbt docs generate
+                dbt docs generate --profiles-dir /__w/DBT/DBT/dbt/pf
                 git add .
                 git commit -m "skip-ci"
                 git push https://$MY_SECRET@github.com/uswal/dbt.git
