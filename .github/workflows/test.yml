@@ -3,7 +3,7 @@ name: Generate and Push File
 on:
   push:
     branches:
-      - mains  # Change to your main branch name if needed
+      - main  # Change to your main branch name if needed
   workflow_dispatch:
 
 jobs:
