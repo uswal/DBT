@@ -47,7 +47,8 @@ jobs:
             #git remote set-url origin https://github.com/uswal/dbt.git
             git config --local user.email "action@github.com"
             git config --local user.name "github-actions"
-            touch "$(date +'%Y%m%d%H%M%S').txt"
+            # touch "$(date +'%Y%m%d%H%M%S').txt"
+            echo "This is a generated file." > generated.txt"
             git add .
             git commit -m "Generate and push a file"
         
