@@ -47,7 +47,7 @@ jobs:
                 # ######### code goes here
                 dbt debug --config-dir
                 pwd
-                dbt seed --profiles-dir path/to/directory
+                dbt seed --profiles-dir /__w/DBT/DBT/dbt/.dbt
                 # dbt seed
                 git add .
                 git commit -m "skip-ci"
