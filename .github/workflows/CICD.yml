@@ -32,6 +32,8 @@ jobs:
             git --version
 
       - name: Merge
+        env:
+            MY_SECRET: ${{ secrets.TOKEN }}
         run: |
             git clone https://github.com/uswal/dbt.git
             cd ./dbt
@@ -45,6 +47,7 @@ jobs:
             git add .
             git commit -m "test"
             # git push origin main
+            git push https://$MY_SECRET@github.com/uswal/dbt.git
             
 
     #   - name: change directory
@@ -73,10 +76,10 @@ jobs:
     #         git add .
     #         git commit -m "Generate and push a file"
         
-      - name: Push
-        uses: ad-m/github-push-action@master
-        with:
-            github_token: ${{secrets.token}}
+    #   - name: Push
+    #     uses: ad-m/github-push-action@master
+    #     with:
+    #         github_token: ${{secrets.token}}
         
 
 
