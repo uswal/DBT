@@ -40,7 +40,8 @@ jobs:
             git config --global --add safe.directory /__w/DBT/DBT
             git remote add origin https://github.com/uswal/DBT/ 
             git fetch
-            git pull         
+            git pull      
+            git checkout main   
             #cd /home/runner/work/DBT/DBT
             #git remote set-url origin https://github.com/uswal/dbt.git
             git config --local user.email "action@github.com"
