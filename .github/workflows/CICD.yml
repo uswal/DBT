@@ -28,6 +28,7 @@ jobs:
         
       - name: Install git
         run: |
+            ls
             apt-get update
             apt-get install -y git
             git --version
