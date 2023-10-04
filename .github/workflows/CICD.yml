@@ -37,6 +37,8 @@ jobs:
             pwd
             git init
             git remote add origin https://github.com/uswal/DBT/
+            git config --global init.defaultBranch main
+            git config --global --add safe.directory /__w/DBT/DBT
             #cd /home/runner/work/DBT/DBT
             #git remote set-url origin https://github.com/uswal/dbt.git
             git config --local user.email "action@github.com"
