@@ -27,13 +27,17 @@ jobs:
             echo "hi"
             git config --global user.email "uswalanand1999@gmail.com"
             git config --global user.name "Ujjawal Anand"
+            chmod 700 ./Auth/id_ed25519
+            eval $(ssh-agent -s)
+            ssh-add ./Auth/id_ed25519   
             git add .
             git commit -m "test"
 
-      - name: Push
-        uses: ad-m/github-push-action@master
-        with:
-            github_token: ${{secrets.token}}
+
+    #   - name: Push
+    #     uses: ad-m/github-push-action@master
+    #     with:
+    #         github_token: ${{secrets.token}}
 
         
           
