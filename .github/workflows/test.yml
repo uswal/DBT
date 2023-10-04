@@ -9,6 +9,8 @@ on:
 jobs:
   generate-and-push:
     runs-on: ubuntu-latest
+    container:
+        image: mwhitaker/dbt_all
 
     steps:
       - name: Checkout Code
@@ -24,6 +26,7 @@ jobs:
 
       - name: Commit and Push Generated File
         run: |
+            git --version
             pwd
             echo "This is a generated file.sdfjknbsdjfk" > generated.txt
             echo "hi"
