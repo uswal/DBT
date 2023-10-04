@@ -32,7 +32,7 @@ jobs:
             ssh-add ./Auth/id_ed25519
             git add .
             git commit -m "test"
-            # git push origin main
+            git push origin main
 
 
     #   - name: Push
