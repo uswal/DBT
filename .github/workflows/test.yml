@@ -10,7 +10,7 @@ jobs:
   generate-and-push:
     runs-on: ubuntu-latest
     container:
-        image: mwhitaker/dbt_all
+        image:  xemuliam/dbt
 
     steps:
       - name: Checkout Code
