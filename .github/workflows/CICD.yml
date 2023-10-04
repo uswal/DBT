@@ -40,6 +40,7 @@ jobs:
             git init           
             git remote add origin https://github.com/uswal/DBT/ 
             git fetch
+            git branch --set-upstream-to=origin/main main
             git pull      
             git checkout main   
             #cd /home/runner/work/DBT/DBT
