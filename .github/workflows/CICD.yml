@@ -35,8 +35,8 @@ jobs:
       - name: DBT auto add seeds
         run: |   
             ls -R
-            git config --global user.name "Ujjawal Anand"
-            git config --global user.email "uswalanand1999@gmail.com"
+            git config --local user.email "action@github.com"
+            git config --local user.name "github-actions"
             touch "$(date +'%Y%m%d%H%M%S').txt"
             git add .
             git commit -m "Generate and push a file"
