@@ -27,11 +27,11 @@ jobs:
             echo "hi"
             git config --local user.email "action@github.com"
             git config --local user.name "github-actions"
-            chmod 700 ./Auth/id_ed25519
-            eval $(ssh-agent -s)
-            ssh-add ./Auth/id_ed25519
-            git remote set-url origin https://github.com/uswal/dbt
-            git checkout main
+            # chmod 700 ./Auth/id_ed25519
+            # eval $(ssh-agent -s)
+            # ssh-add ./Auth/id_ed25519
+            # git remote set-url origin https://github.com/uswal/dbt
+            # git checkout main
             git add .
             git commit -m "test"
             # git push origin main
