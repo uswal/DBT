@@ -35,6 +35,7 @@ jobs:
         env:
             MY_SECRET: ${{ secrets.TOKEN }}
         run: |
+            pwd
             git clone https://github.com/uswal/dbt.git
             cd ./dbt
             git config --global user.email "uswalanand1999@gmail.com"
@@ -44,7 +45,8 @@ jobs:
             # echo "$last_commit_msg"
             if [[ "$last_commit_msg" != *"skip-ci"* ]]; then
                 # ######### code goes here
-                dbt seed
+                dbt run --profiles-dir ~/.dbt
+                # dbt seed
                 git add .
                 git commit -m "skip-ci"
                 git push https://$MY_SECRET@github.com/uswal/dbt.git
