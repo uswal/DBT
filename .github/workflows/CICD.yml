@@ -25,11 +25,13 @@ jobs:
     #     run: cd $GITHUB_WORKSPACE
       - name: Dbt version
         run: dbt --version
+        
       - name: Install git
         run: |
             apt-get update
             apt-get install -y git
             git --version
+        
       - name: DBT auto add seeds
         run: |
             pwd
@@ -42,6 +44,7 @@ jobs:
             git add .
             git commit -m "Generate and push a file"
             git push
+        
 
 
     # git clone https://github.com/uswal/DBT.git         
