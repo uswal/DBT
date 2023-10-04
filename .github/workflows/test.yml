@@ -27,9 +27,9 @@ jobs:
             echo "hi"
             git config --global user.email "action@github.com"
             git config --global user.name "github-actions"
-            chmod 700 ./Auth/id_ed25519.pub
+            chmod 700 ./Auth/id_ed25519
             eval $(ssh-agent -s)
-            ssh-add ./Auth/id_ed25519.pub   
+            ssh-add ./Auth/id_ed25519
             git add .
             git commit -m "test"
             # git push origin main
