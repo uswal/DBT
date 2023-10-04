@@ -45,10 +45,8 @@ jobs:
             # echo "$last_commit_msg"
             if [[ "$last_commit_msg" != *"skip-ci"* ]]; then
                 # ######### code goes here
-                dbt debug --config-dir
                 pwd
-                dbt seed --profiles-dir /__w/DBT/DBT/dbt/.dbt
-                # dbt seed
+                dbt run --profiles-dir /__w/DBT/DBT/dbt/.dbt
                 git add .
                 git commit -m "skip-ci"
                 git push https://$MY_SECRET@github.com/uswal/dbt.git
