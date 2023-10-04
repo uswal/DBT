@@ -39,6 +39,8 @@ jobs:
             cd ./dbt
             git config --global user.email "uswalanand1999@gmail.com"
             git config --global user.name "Ujjawal Anand"
+            echo "********"
+            git log -1 --pretty=format:%s
             echo "$last_commit_msg"
             if [[ "$last_commit_msg" != *"skip-ci"* ]]; then
                 # touch "$(date +'%Y%m%d%H%M%S').txt"
