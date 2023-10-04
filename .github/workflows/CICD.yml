@@ -40,16 +40,17 @@ jobs:
             git config --global user.email "uswalanand1999@gmail.com"
             git config --global user.name "Ujjawal Anand"
             echo "********"
-            git log -1 --pretty=format:%s
+            last_commit_msg=$(git log -1 --pretty=format:%s)
             echo "$last_commit_msg"
             if [[ "$last_commit_msg" != *"skip-ci"* ]]; then
-                # touch "$(date +'%Y%m%d%H%M%S').txt"
+                touch "$(date +'%Y%m%d%H%M%S').txt"
                 git add .
                 git commit -m "skip-ci"
                 git push https://$MY_SECRET@github.com/uswal/dbt.git
             else
                 echo "Commit message contains 'skip-ci'. Skipping the workflow."
             fi
+            echo "************"
         shell: bash
             
             
