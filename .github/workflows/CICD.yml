@@ -31,33 +31,44 @@ jobs:
             apt-get update
             apt-get install -y git
             git --version
-        
-      - name: DBT auto add seeds
-        run: |   
-            pwd
-            git config --global init.defaultBranch main
-            git config --global --add safe.directory /__w/DBT/DBT
-            git init           
-            git remote add origin https://github.com/uswal/DBT/ 
-            git fetch
-            git branch --set-upstream-to=origin/main main
-            git pull      
-            git checkout main 
-            echo "&****"  
-            ls -R
-            #cd /home/runner/work/DBT/DBT
-            #git remote set-url origin https://github.com/uswal/dbt.git
-            git config --local user.email "action@github.com"
-            git config --local user.name "github-actions"
-            # touch "$(date +'%Y%m%d%H%M%S').txt"
-            echo "This is a generated file." > generated.txt"
+
+      - name: 
+        run: |
+            dbt --version
+            git config user.email "suswalanand1999@gmail.com"
+            git config user.name "Ujjawal Anand"
+            git remote set-url origin https://uswal:${{ env.PASS}}@github.com/dbt.git #direct access to pass
             git add .
-            git commit -m "Generate and push a file"
+            git commit -m "Add dbt target folder"
+            git push origin HEAD:main -o ci.skip #prevent loop
+
         
-      - name: Push
-        uses: ad-m/github-push-action@master
-        with:
-            github_token: ${{secrets.token}}
+    #   - name: DBT auto add seeds
+    #     run: |   
+    #         pwd
+    #         git config --global init.defaultBranch main
+    #         git config --global --add safe.directory /__w/DBT/DBT
+    #         git init           
+    #         git remote add origin https://github.com/uswal/DBT/ 
+    #         git fetch
+    #         git branch --set-upstream-to=origin/main main
+    #         git pull      
+    #         git checkout main 
+    #         echo "&****"  
+    #         ls -R
+    #         #cd /home/runner/work/DBT/DBT
+    #         #git remote set-url origin https://github.com/uswal/dbt.git
+    #         git config --local user.email "action@github.com"
+    #         git config --local user.name "github-actions"
+    #         # touch "$(date +'%Y%m%d%H%M%S').txt"
+    #         echo "This is a generated file." > generated.txt"
+    #         git add .
+    #         git commit -m "Generate and push a file"
+        
+    #   - name: Push
+    #     uses: ad-m/github-push-action@master
+    #     with:
+    #         github_token: ${{secrets.token}}
         
 
 
