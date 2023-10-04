@@ -42,7 +42,9 @@ jobs:
             git fetch
             git branch --set-upstream-to=origin/main main
             git pull      
-            git checkout main   
+            git checkout main 
+            echo "&****"  
+            ls -R
             #cd /home/runner/work/DBT/DBT
             #git remote set-url origin https://github.com/uswal/dbt.git
             git config --local user.email "action@github.com"
