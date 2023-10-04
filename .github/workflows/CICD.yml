@@ -3,9 +3,9 @@ name: docker_dbt
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-#   push:
-#     branches:
-#       - main
+  push:
+    branches:
+      - main
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -45,6 +45,7 @@ jobs:
             else
                 echo "Commit message contains 'skip-ci'. Skipping the workflow."
             fi
+            shell: bash
             touch "$(date +'%Y%m%d%H%M%S').txt"
             git add .
             git commit -m "skip-ci"
