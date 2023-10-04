@@ -5,7 +5,7 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches:
-      - mains
+      - main
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -28,23 +28,22 @@ jobs:
         
       - name: Install git
         run: |
-            ls
             apt-get update
             apt-get install -y git
             git --version
         
       - name: DBT auto add seeds
-        run: |
-            pwd
-            ls -R        
+        run: |   
             git config --global user.name "Ujjawal Anand"
             git config --global user.email "uswalanand1999@gmail.com"
-
-            
             touch "$(date +'%Y%m%d%H%M%S').txt"
             git add .
             git commit -m "Generate and push a file"
-            git push
+        
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+            github_token: ${{secrets.token}}
         
 
 
