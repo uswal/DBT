@@ -35,9 +35,9 @@ jobs:
       - name: DBT auto add seeds
         run: |   
             pwd
-            git init
             git config --global init.defaultBranch main
             git config --global --add safe.directory /__w/DBT/DBT
+            git init           
             git remote add origin https://github.com/uswal/DBT/ 
             git fetch
             git pull      
