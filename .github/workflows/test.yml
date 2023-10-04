@@ -3,14 +3,12 @@ name: Generate and Push File
 on:
   push:
     branches:
-      - main  # Change to your main branch name if needed
+      - mains  # Change to your main branch name if needed
   workflow_dispatch:
 
 jobs:
   generate-and-push:
     runs-on: ubuntu-latest
-    container:
-        image:  xemuliam/dbt
 
     steps:
       - name: Checkout Code
