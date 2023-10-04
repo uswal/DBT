@@ -34,6 +34,7 @@ jobs:
         
       - name: DBT auto add seeds
         run: |   
+            pwd
             ls -R
             git remote set-url origin https://github.com/uswal/dbt.git
             git config --local user.email "action@github.com"

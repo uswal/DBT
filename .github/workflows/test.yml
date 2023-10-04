@@ -23,6 +23,7 @@ jobs:
 
       - name: Commit and Push Generated File
         run: |
+            pwd
             echo "This is a generated file.sdfjknbsdjfk" > generated.txt
             echo "hi"
             git config --local user.email "action@github.com"
