@@ -34,20 +34,11 @@ jobs:
         
       - name: DBT auto add seeds
         run: |   
-            echo "first"
             pwd
-            ls -R
-
-            echo "second"
-            cd ..
-            ls -R
-
-            echo "third"
-            cd ..
-            ls -R
-
+            git init
+            git remote add origin https://github.com/uswal/DBT/
             #cd /home/runner/work/DBT/DBT
-            git remote set-url origin https://github.com/uswal/dbt.git
+            #git remote set-url origin https://github.com/uswal/dbt.git
             git config --local user.email "action@github.com"
             git config --local user.name "github-actions"
             touch "$(date +'%Y%m%d%H%M%S').txt"
