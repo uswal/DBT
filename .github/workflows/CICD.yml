@@ -41,26 +41,37 @@ jobs:
             git config --global user.email "uswalanand1999@gmail.com"
             git config --global user.name "Ujjawal Anand"
             echo "********"
-            last_commit_msg=$(git log -1 --pretty=format:%s)
+            echo "--- DBT SEED ---"
+            dbt seed --profiles-dir /__w/DBT/DBT/dbt/pf
+            echo "--- DBT TEST ---"
+            dbt test --profiles-dir /__w/DBT/DBT/dbt/pf
+            echo "--- DBT DOCS GENERATE ---"
+            dbt docs generate --profiles-dir /__w/DBT/DBT/dbt/pf
+            cp -u -r target docs
+            git add .
+            git commit -m "[skip ci] Add dbt target folder"
+            git push https://$MY_SECRET@github.com/uswal/dbt.git
+            
+            # last_commit_msg=$(git log -1 --pretty=format:%s)
             # echo "$last_commit_msg"
-            if [[ "$last_commit_msg" != *"skip-ci"* ]]; then
-                # ######### code goes here
-                pwd
-                echo "--- DBT SEED ---"
-                dbt seed --profiles-dir /__w/DBT/DBT/dbt/pf
-                echo "--- DBT TEST ---"
-                dbt test --profiles-dir /__w/DBT/DBT/dbt/pf
-                echo "--- DBT DOCS GENERATE ---"
-                dbt docs generate --profiles-dir /__w/DBT/DBT/dbt/pf
-                ls
-                # rm -r docs
-                cp -u -r target docs
-                git add .
-                git commit -m "skip-ci"
-                git push https://$MY_SECRET@github.com/uswal/dbt.git
-            else
-                echo "Commit message contains 'skip-ci'. Skipping the workflow."
-            fi
+            # if [[ "$last_commit_msg" != *"skip-ci"* ]]; then
+            #     # ######### code goes here
+            #     pwd
+            #     echo "--- DBT SEED ---"
+            #     dbt seed --profiles-dir /__w/DBT/DBT/dbt/pf
+            #     echo "--- DBT TEST ---"
+            #     dbt test --profiles-dir /__w/DBT/DBT/dbt/pf
+            #     echo "--- DBT DOCS GENERATE ---"
+            #     dbt docs generate --profiles-dir /__w/DBT/DBT/dbt/pf
+            #     ls
+            # 
+            #     cp -u -r target docs
+            #     git add .
+            #     git commit -m "skip-ci"
+            #     git push https://$MY_SECRET@github.com/uswal/dbt.git
+            # else
+            #     echo "Commit message contains 'skip-ci'. Skipping the workflow."
+            # fi
             echo "************"
         shell: bash
             
