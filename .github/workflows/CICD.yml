@@ -52,7 +52,8 @@ jobs:
                 dbt test --profiles-dir /__w/DBT/DBT/dbt/pf
                 echo "--- DBT DOCS GENERATE ---"
                 dbt docs generate --profiles-dir /__w/DBT/DBT/dbt/pf
-                rm -r /__w/DBT/DBT/dbt/docs
+                ls
+                rm -r docs
                 cp -r target docs
                 git add .
                 git commit -m "skip-ci"
