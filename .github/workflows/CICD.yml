@@ -53,7 +53,7 @@ jobs:
                 echo "--- DBT DOCS GENERATE ---"
                 dbt docs generate --profiles-dir /__w/DBT/DBT/dbt/pf
                 ls
-                rm -r docs
+                # rm -r docs
                 cp -r target docs
                 git add .
                 git commit -m "skip-ci"
