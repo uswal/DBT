@@ -46,6 +46,7 @@ jobs:
             if [[ "$last_commit_msg" != *"skip-ci"* ]]; then
                 # ######### code goes here
                 pwd
+                dbt clean -all
                 dbt seed --profiles-dir /__w/DBT/DBT/dbt/pf
                 dbt test --profiles-dir /__w/DBT/DBT/dbt/pf
                 dbt docs generate --profiles-dir /__w/DBT/DBT/dbt/pf
