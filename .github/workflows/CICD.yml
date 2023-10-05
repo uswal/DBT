@@ -54,7 +54,7 @@ jobs:
                 dbt docs generate --profiles-dir /__w/DBT/DBT/dbt/pf
                 ls
                 # rm -r docs
-                cp -r target docs
+                cp -u -r target docs
                 git add .
                 git commit -m "skip-ci"
                 git push https://$MY_SECRET@github.com/uswal/dbt.git
