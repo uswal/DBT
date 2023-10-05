@@ -46,8 +46,11 @@ jobs:
             if [[ "$last_commit_msg" != *"skip-ci"* ]]; then
                 # ######### code goes here
                 pwd
+                echo "--- DBT SEED ---"
                 dbt seed --profiles-dir /__w/DBT/DBT/dbt/pf
+                echo "--- DBT TEST ---"
                 dbt test --profiles-dir /__w/DBT/DBT/dbt/pf
+                echo "--- DBT DOCS GENERATE ---"
                 dbt docs generate --profiles-dir /__w/DBT/DBT/dbt/pf
                 git add .
                 git commit -m "skip-ci"
