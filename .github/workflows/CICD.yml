@@ -42,8 +42,8 @@ jobs:
             git config --global user.name "Ujjawal Anand"
             echo "********"
             pwd
-            dbt run --profiles-dir /__w/DBT/DBT/dbt
-            # dbt debug --profiles-dir /__w/DBT/DBT/dbt/pf
+            # dbt run --profiles-dir /__w/DBT/DBT/dbt/pf
+            dbt debug --profiles-dir /__w/DBT/DBT/dbt/pf
             # echo "--- DBT SEED ---"
             # dbt seed --profiles-dir /__w/DBT/DBT/dbt/pf
             # echo "--- DBT TEST ---"
