@@ -3,11 +3,12 @@ dbtlearn:
     dev:
       account: KZCOZLS-IV75894
       database: AIRBNB
-      password: dbtPassword123
+      user: "dbt"
+      password: "dbtPassword123"
       role: transform
       schema: DEV
       threads: 1
       type: snowflake
-      user: dbt
+      
       warehouse: COMPUTE_WH
   target: dev
