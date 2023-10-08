@@ -9,8 +9,8 @@ dbtlearn:
       schema: DEV
       threads: 1
       type: snowflake
-      # user: dbt
-      user: "{{env_var('guser')}}"
+      user: dbt
+      # user: "{{env_var('guser')}}"
       warehouse: COMPUTE_WH
       
       
