@@ -43,13 +43,13 @@ jobs:
             git config --global user.email "uswalanand1999@gmail.com"
             git config --global user.name "Ujjawal Anand"
             echo "********"
-            dbt clean #--profiles-dir /__w/DBT/DBT/dbt/pf
+            dbt clean --profiles-dir /__w/DBT/DBT/dbt/pf
             echo "--- DBT SEED ---"
-            dbt seed #--profiles-dir /__w/DBT/DBT/dbt/pf
+            dbt seed --profiles-dir /__w/DBT/DBT/dbt/pf
             echo "--- DBT TEST ---"
-            dbt test #--profiles-dir /__w/DBT/DBT/dbt/pf
+            dbt test --profiles-dir /__w/DBT/DBT/dbt/pf
             echo "--- DBT DOCS GENERATE ---"
-            dbt docs generate #--profiles-dir /__w/DBT/DBT/dbt/pf
+            dbt docs generate --profiles-dir /__w/DBT/DBT/dbt/pf
             cp -u -r target docs
             git add .
             git commit -m "[skip ci] Add dbt target folder"
