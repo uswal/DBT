@@ -3,8 +3,8 @@ dbtlearn:
     dev:
       account: KZCOZLS-IV75894
       database: AIRBNB
-      password:  "{{env_var('gpass')}}"
-      # password: dbtPassword123
+      # password:  "{{env_var('gpass')}}"
+      password: dbtPassword123
       role: transform
       schema: DEV
       threads: 1
