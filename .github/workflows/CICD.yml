@@ -34,8 +34,8 @@ jobs:
       - name: Run DBT seed and Generate output
         env:
             MY_SECRET: ${{ secrets.TOKEN }}
-            user: ${{ SECRETS.USER }}
-            pass: ${{ SECRETS.PASS }}
+            guser: ${{ SECRETS.USER }}
+            gpass: ${{ SECRETS.PASS }}
         run: |
             pwd
             git clone https://github.com/uswal/dbt.git
