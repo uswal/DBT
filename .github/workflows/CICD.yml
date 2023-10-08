@@ -41,7 +41,8 @@ jobs:
             git config --global user.email "uswalanand1999@gmail.com"
             git config --global user.name "Ujjawal Anand"
             echo "********"
-            dbt run 
+            pwd
+            dbt run --profiles-dir /__w/DBT/DBT/dbt/pf
             # dbt debug --profiles-dir /__w/DBT/DBT/dbt/pf
             # echo "--- DBT SEED ---"
             # dbt seed --profiles-dir /__w/DBT/DBT/dbt/pf
