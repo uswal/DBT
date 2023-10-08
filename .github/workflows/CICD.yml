@@ -42,8 +42,12 @@ jobs:
             git config --global user.name "Ujjawal Anand"
             echo "********"
             pwd
-            # dbt run --profiles-dir /__w/DBT/DBT/dbt/pf
+            
             dbt debug --profiles-dir /__w/DBT/DBT/dbt/pf
+
+            dbt run -f --profiles-dir /__w/DBT/DBT/dbt/pf
+
+
             # echo "--- DBT SEED ---"
             # dbt seed --profiles-dir /__w/DBT/DBT/dbt/pf
             # echo "--- DBT TEST ---"
@@ -51,9 +55,9 @@ jobs:
             # echo "--- DBT DOCS GENERATE ---"
             # dbt docs generate --profiles-dir /__w/DBT/DBT/dbt/pf
             # cp -u -r target docs
-            # git add .
-            # git commit -m "[skip ci] Add dbt target folder"
-            # git push https://$MY_SECRET@github.com/uswal/dbt.git
+            git add .
+            git commit -m "[skip ci] Add dbt target folder"
+            git push https://$MY_SECRET@github.com/uswal/dbt.git
             echo "************"
         shell: bash
             
