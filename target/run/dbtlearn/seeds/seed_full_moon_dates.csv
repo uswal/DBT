@@ -1,9 +1,7 @@
 
     
     
-    
-    create table AIRBNB.DEV.seed_full_moon_dates (full_moon_date date)
-  ;
+    truncate table "AIRBNB"."DEV"."SEED_FULL_MOON_DATES";
     -- dbt seed --
     
             insert into AIRBNB.DEV.seed_full_moon_dates (full_moon_date) values
