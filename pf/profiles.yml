@@ -3,9 +3,9 @@ dbtlearn:
     dev:
       account: KZCOZLS-IV75894
       database: AIRBNB
-      user: "dbt"
-      password: "dbtPassword123"
-      role: transform
+      user: suswala
+      password: Snowflakedemo#1
+      role: ACCOUNTADMIN
       schema: DEV
       threads: 1
       type: snowflake
