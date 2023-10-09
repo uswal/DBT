@@ -36,7 +36,6 @@ jobs:
             MY_SECRET: ${{ secrets.TOKEN }}
         run: |
             pwd
-            dbt debug --profiles-dir /__w/DBT/DBT/pf
             # git clone https://github.com/uswal/dbt.git
             # cd ./dbt
             # git config --global user.email "uswalanand1999@gmail.com"
@@ -44,7 +43,7 @@ jobs:
             # echo "********"
             # pwd
             
-            # dbt debug --profiles-dir /__w/DBT/DBT/dbt/pf
+            dbt debug --profiles-dir /__w/DBT/DBT/dbt/pf
 
             # dbt run -f --profiles-dir /__w/DBT/DBT/dbt/pf
 
