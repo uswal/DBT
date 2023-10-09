@@ -1,4 +1,4 @@
-dbtlear:
+dbtlearn:
   outputs:
     dev:
       account: KZCOZLS-IV75894
@@ -11,3 +11,5 @@ dbtlear:
       user: dbt
       warehouse: COMPUTE_WH
   target: dev
+  ignore_libraries:
+    - libcrypto
